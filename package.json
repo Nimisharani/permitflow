@@ -1,0 +1,12 @@
+{
+  "name": "permitflow",
+  "version": "0.1.0",
+  "description": "Municipal permitting where illegal workflow transitions are rejected by the database, not by a service layer somebody will bypass.",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "test": "node --experimental-strip-types --test",
+    "demo": "node --experimental-strip-types src/demo.ts"
+  }
+}
