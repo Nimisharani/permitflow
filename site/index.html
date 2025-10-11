@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Attempt a municipal permit transition and see whether department and state rules allow it.">
+  <title>Permit Flow · Working Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to results</a>
+  <header class="masthead"><a class="brand" href="https://github.com/Nimisharani/permitflow">Permit Flow</a><span class="build-state"><i></i> live computation</span></header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">Database-enforced workflow</p>
+      <h1>Run the decision,<br><em>inspect the evidence.</em></h1>
+      <p class="lede">Attempt a municipal permit transition and see whether department and state rules allow it.</p>
+    </section>
+    <section class="workspace" aria-label="Interactive project workspace">
+      <form id="workspace-form" class="control-panel">
+        <div class="panel-heading"><span>01</span><div><p>Inputs</p><h2>Configure the run</h2></div></div>
+        <div class="fields"><label class="field" for="currentState"><span>Current state</span><select id="currentState" name="currentState"><option>DRAFT</option><option selected>SUBMITTED</option><option>PLANNING_REVIEW</option><option>FIRE_REVIEW</option><option>INSPECTION</option><option>APPROVED</option><option>ISSUED</option><option>REJECTED</option><option>WITHDRAWN</option></select></label>
+<label class="field" for="department"><span>Acting department</span><select id="department" name="department"><option>APPLICANT</option><option>PLANNING</option><option>FIRE</option><option>INSPECTIONS</option><option selected>CLERK</option></select></label>
+<label class="field" for="nextState"><span>Requested state</span><select id="nextState" name="nextState"><option>SUBMITTED</option><option>PLANNING_REVIEW</option><option>FIRE_REVIEW</option><option>INSPECTION</option><option>APPROVED</option><option selected>ISSUED</option><option>REJECTED</option><option>WITHDRAWN</option></select></label></div>
+        <div class="actions"><button class="run" type="submit">Run analysis <span>→</span></button><button id="reset-button" class="reset" type="button">Reset</button></div>
+      </form>
+      <section id="results" class="result-panel" aria-live="polite" aria-busy="true">
+        <div class="panel-heading"><span>02</span><div><p>Output</p><h2>Decision trace</h2></div></div>
+        <div id="result-content" class="result-content"><div class="loading">Computing initial scenario…</div></div>
+      </section>
+    </section>
+  </main>
+  <footer><p>Built from the tested logic in <a href="https://github.com/Nimisharani/permitflow">Nimisharani/permitflow</a>.</p></footer>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
